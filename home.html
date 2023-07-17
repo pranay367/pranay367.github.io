@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href = "style.css">
+    <!-- awesome font -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+</head>
+<body>
+    <div class = "hero-header">
+        <div class = "wrapper">
+            <header>
+                <div class="logo">
+                    <i class="fa-solid fa-p"></i>
+                    <div class = "logo-text">Pranay</div>
+                </div>
+                <nav>
+                    <div class="togglebtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="navlinks">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Resume</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+        <div class="container">
+            <div class="hero-pic">
+                <img src="default.webp" alt="profile pic">
+            </div>
+            <div class="hero-text">
+                <h5>Hi I'm an <span id="input" class="input"></span></h5>
+                <h1>Pranay Varma</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Nesciunt autem quidem in modi, consequatur necessitatibus, 
+                    magni similique possimus dicta sed eum assumenda quae accusantium 
+                    et corrupti harum enim commodi excepturi.</p>
+                
+                <div class = "btn-group">
+                    <a href="#" class="btn active">Download CV</a>
+                    <a href="#" class="btn"> Contact</a>
+                </div>
+
+                <div class="social">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-snapchat"></i></a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</body>
+<!-- external js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.0/typed.min.js"></script>
+<script>
+    // button to show and hide nav bar 
+    var togglebtn = document.querySelector(".togglebtn");
+    var nav = document.querySelector(".navlinks");
+    var links = document.querySelector(".navlinks li");
+
+    togglebtn.addEventListener("click", function () {
+        this.classList.toggle("click");
+        nav.classList.toggle("open");
+    })
+
+    var typed = new Typed('#input', {
+        strings: ['Student',"Intern", 'Student', "Intern", 'Student', "Intern"],
+        typeSpeed: 50,
+        backSpeed: 50,
+        loop: true,
+        loopCount: 3
+    });
+
+</script>
+</html>
